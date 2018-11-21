@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<document signature="Lone Wolf Custom Output" product="Hero Lab">
+<output
+  folder="tdjr_rt_complete"
+  name="Tillman's Bastardization of AncientOne's Customizable Pathfinder Sheet v4.14.tdjr"
+  summary="Tillman's mangling along with many powerful options; requires a current browser version."
+  description="A highly customizable Pathfinder character sheet with detailed text for traits, feats, special abilities and spells. This sheet uses HTML5, and will not work on old browser versions.  Created by Roger Terrell. And bastardized by Tilman Dickson to allow quicker navigation."
+  filename="tdjr_rt_complete.xsl"
+  major="4" minor="14"
+  images="files">
+  </output>
+</document>
+
+
+
