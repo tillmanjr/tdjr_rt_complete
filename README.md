@@ -1,6 +1,7 @@
 # tdjr_rt_complete  
 <img src="https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_mini.png" align="right" />  
-A customization of the Ancient One's custom output _Character Sheet_ for [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab)  
+A customization of the Ancient One's custom output _Character Sheet_ for <a href="http://www.wolflair.com/index.php?context=hero_lab">Hero Lab</a>  
+  
 It adds a new control panel section for quick navigation to specific sections within the character sheet.
   
 ## To use:
@@ -25,7 +26,8 @@ _Typically here:_ C:\ProgramData\Hero Lab\customoutput\pathfinder
 5. Load your character/portfolio  
 6. File | Save Custom Output | Tillman's ...
 7. Enjoy easier navigation of Ancient One's excellent Character Sheet
-
+  
+  
 ![screenshot of new control panel](
         https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_screenshot.png
       )
