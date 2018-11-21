@@ -202,7 +202,7 @@
     
    
    <div id="control-panel-accordion">
-       <h3><a href="#">Tillman's Bastardized Controls</a></h3>
+       <h3><a href="#">Tillman's Bastardized Navigation</a></h3>
        <div>
             <table id="control-panel-content-table" class="control-panel-table">
                 <tr><th>
