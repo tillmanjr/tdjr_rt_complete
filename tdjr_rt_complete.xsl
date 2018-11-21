@@ -116,7 +116,13 @@
                         var charDiv = document.getElementById('character_0')
                         var sect = charDiv.querySelector(sections[section])
                         sect.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-                        
+                        sect.classList.add('pulse')
+                        let thisSect = sect
+                        setTimeout(function(){
+                            thisSect.classList.remove('pulse')
+                            },
+                            3100
+                        )
                     }
                 </script>
                 <noscript>
@@ -201,6 +207,23 @@
             margin-left: 25px;
             color: green;
             font-weight: 700;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scaleX(1)
+            }
+        
+            50% {
+                transform: scale3d(1.05, 1.05, 1.05)
+            }
+        
+            to {
+                transform: scaleX(1)
+            }
+        }
+        
+        .pulse {
+            animation: pulse 3s;
         }
     </style>
     
