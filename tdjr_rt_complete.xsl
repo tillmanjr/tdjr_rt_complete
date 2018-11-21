@@ -102,9 +102,12 @@
                                 let thisSection = section
                                 // hack to allow the section to display before continuing
                                 setTimeout(function() {
+                                    document.getElementById('tillman-message-div').classList.add("hiddenDiv")
                                     showSection(thisSection)
                                 },
                                 500)
+                                let msgDiv = document.getElementById('tillman-message-div')
+                                msgDiv.classList.remove("hiddenDiv")
                                 showFeatAbilityCBox.click()
                                 return true
                             } 
@@ -138,40 +141,8 @@
    {{if (numNonMinionCharacters() > 1) tmpl='#tmpl_controlPanel_CharacterSelect'/}}
 
     <style>
-       #control-panel-accordiont{
-           border: 1px solid rgb(254, 238, 189);
-           border-radius: 8px;
-           border-color: black;
-           font-family: "Segoe UI", Arial, sans-serif;
-           padding: 0px;
-           background-color: white;
-           margin-bottom: 5px;
-       }
-       #control-panel-accordiont h3 {
-           padding-left: 20px;
-           padding-top: 5.72px;
-           padding-bottom: 5.72px;
-           padding-right: 5.72px;
-           color: rgb(0, 116, 199);
-           font-size: 11px;
-           text-decoration-color: rgb(0, 116, 199);
-           text-decoration-style: solid;
-           border-bottom: 1px solid gray;
-       }
-       #control-panel-accordiont-content {
-        width: 100%;
-        background-image: linear-gradient(rgb(254, 247, 205), rgb(254, 238, 189));
-        font-family: "Segoe UI", Arial, sans-serif;
-        font-size: 11.44px;
-        font-weight: 700;
-        padding-left: 0px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-       }
-       #control-panel-accordiont-content table {
-           width: 95%;
+       #control-panel-content-table {
+           width: 100%;
            margin-left: 10px;
        }
         .btn-group-pchar {
@@ -182,7 +153,7 @@
             width: 100%;
         }
         .btn-group-pchar button {
-            background-color: #EFDCA3;
+            background-color: rgba(239,220,163, 0.1);
             border: 1px solid #d19405;
             color: #40300D; 
             padding: 10px 10px;
@@ -192,6 +163,7 @@
             width: 99%;
             font-weight: 700;
             font-size: 12px;
+            border-radius: 8px;
         }
         .btn-group-pchar:after {
             content: "";
@@ -199,7 +171,7 @@
             display: table;
         }
         .btn-group-pchar button:hover {
-            background-color: #FFEBAE;
+            background-color: rgba(239,220,163,.9);
         }
         .btn-group-pchar div.btn-subgroup-div {
             max-height: 29px;
@@ -213,16 +185,29 @@
             max-width: 33%
         }
         .btn-group-pchar div.btn-subgroup-div button:hover {
-            background-color: #FFEBAE;
+            background-color: rgba(239,220,163,.9);
+        }
+        .hiddenDiv {
+            display: none;
+        }
+        .blockDiv {
+            display: block;
+        }
+        #tillman-message-div {
+            margin-left: 25px;
+            color: green;
+            font-weight: 700;
         }
     </style>
-    <div id="control-panel-accordiont">
-       <h3>Tillman's Bastardized Controls</h3>
-       <div id="control-panel-accordiont-content">
-           <table>
-               <tr><th>
-                   <div>
-                       <div class="btn-group-pchar">
+    
+   
+   <div id="control-panel-accordion">
+       <h3><a href="#">Tillman's Bastardized Controls</a></h3>
+       <div>
+            <table id="control-panel-content-table" class="control-panel-table">
+                <tr><th>
+                    <div>
+                        <div class="btn-group-pchar">
                             <div class='btn-group-div'>
                                 <button onclick="showSection(0)">Character</button>
                             </div>
@@ -247,13 +232,11 @@
                                 <button onclick="showSection(12)">Spells</button>
                             </div>
                         </div>
-                  </div>
+                    </div>
                 </th></tr>
             </table>
-        </div>
-    </div>
-   
-   <div id="control-panel-accordion">
+            <div id="tillman-message-div" class='hiddenDiv'><span>Enabling <em>Show Feat/Ability Descriptions</em></span></div>
+       </div>
        <h3><a href="#">General Formatting</a></h3>
        <div>
           <table class="control-panel-table">
