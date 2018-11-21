@@ -159,12 +159,14 @@
             padding: 10px 10px;
             cursor: pointer;
             float: left; 
-            margin: 2px 0px;
+            margin: 2px 4px 0px 4px;
             width: 99%;
             font-weight: 700;
             font-size: 12px;
             border-radius: 8px;
         }
+
+        .btn-group-pchar button:focus {outline:none;}
         .btn-group-pchar:after {
             content: "";
             clear: both;
@@ -176,14 +178,16 @@
         .btn-group-pchar div.btn-subgroup-div {
             max-height: 29px;
             width: 100%;
+            padding-left: 1px;
+            padding-right: 1px;
         }
         .btn-group-pchar div.btn-subgroup-div button {
             padding: 3px 3px;
             max-height: 27px;
-            margin: 2px 0px;
-            width: 33%;
-            max-width: 33%
+            margin: 2px 2px 0px 2px;
+            max-width: 32%
         }
+        .btn-group-pchar div.btn-subgroup-div button {outline: none;}
         .btn-group-pchar div.btn-subgroup-div button:hover {
             background-color: rgba(239,220,163,.9);
         }
@@ -202,7 +206,7 @@
     
    
    <div id="control-panel-accordion">
-       <h3><a href="#">Tillman's Bastardized Navigation</a></h3>
+       <h3><a href="#">Tillman's Bastardized Controls</a></h3>
        <div>
             <table id="control-panel-content-table" class="control-panel-table">
                 <tr><th>
