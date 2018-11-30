@@ -1,9 +1,9 @@
 # tdjr_rt_complete  
 <img src="https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_mini.png" align="right" />  
 A customization of the Ancient One's custom output *Character Sheet* for <a href="http://www.wolflair.com/index.php?context=hero_lab">Hero Lab</a>  
-To see it in action, <a href="https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_vid.mp4">30s video</a>
   
-It adds a new control panel section for quick navigation to specific sections within the character sheet.
+It adds a new control panel section for quick navigation to specific sections within the character sheet.  
+To see it in action, <a href="https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_vid.mp4">30s video</a>
   
 ## To use:
 1. Click the button for the section you'd like to see.  
