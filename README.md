@@ -33,6 +33,6 @@ _Typically here:_ C:\ProgramData\Hero Lab\customoutput\pathfinder
         https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_screenshot.png
       )
 ![animated gif of new control panel in action](
-        tdjr_rt_complete/tdjr_rt_complete_see_it_in_action.gif
+        https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_see_it_in_action.gif
         )
       
