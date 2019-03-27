@@ -3,7 +3,7 @@
 A customization of the Ancient One's custom output *Character Sheet* for <a href="http://www.wolflair.com/index.php?context=hero_lab">Hero Lab</a>  
   
 It adds a new control panel section for quick navigation to specific sections within the character sheet.  
-To see it in action, <a href="https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_vid.mp4">30s video</a>
+To see it in action, scroll to the bottom of this readme.
   
 ## To use:
 1. Click the button for the section you'd like to see.  
@@ -32,6 +32,8 @@ _Typically here:_ C:\ProgramData\Hero Lab\customoutput\pathfinder
 ![screenshot of new control panel](
         https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_screenshot.png
       )
+      
+## New control panel in action
 ![animated gif of new control panel in action](
         https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_see_it_in_action.gif
         )
