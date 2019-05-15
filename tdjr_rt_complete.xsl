@@ -119,12 +119,14 @@
                         var spab = '#full-details-placeholder-0 > div > div.special-ability-details-panel'  // may not be displayed
                         var mgit = '#full-details-placeholder-0 > div > div.magic-item-details-panel'
                         var spll = '#spell-descriptions-placeholder-0' // may not be displayed
+                        var comp = '#minions-placeholder-0 > div'
                         var sections = [
                             char,
                             skll, abls, gear,
                             resc, bkgd, mgit,
                             attk, savt, cbmv,
                             spab, trat, spll,
+                            comp
                         ]
 
                         if ( section === 10 || section === 11 ) {
@@ -251,6 +253,11 @@
     </style>
 
 
+   function hasCompanion() {
+      var charDiv = document.getElementById('minions-placeholder-0')
+      return charDiv ? true : false
+   }
+
    <div id="control-panel-accordion">
        <h3><a href="#">Tillman's Bastardized Controls</a></h3>
        <div>
@@ -259,7 +266,7 @@
                     <div>
                         <div class="btn-group-pchar">
                             <div class='btn-group-div'>
-                                <button onclick="showSection(0)">Character</button>
+                                <button onclick="showSection(0)">Companion</button>
                             </div>
                             <div class='btn-subgroup-div'>
                                 <button onclick="showSection(1)">Skills</button>
