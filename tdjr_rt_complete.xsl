@@ -96,10 +96,10 @@
                          7 Attacks     // pulse header only
                          8 Throws
                          9 Manuevers
-                        11 Special Abilities
-                        12 Traits
-                        13 Spells
-                        14 Companions
+                        10 Special Abilities
+                        11 Traits
+                        12 Spells
+                        13 Companions
 
                      */
                     function showSection(section) {
@@ -119,14 +119,14 @@
                         var spab = '#full-details-placeholder-0 > div > div.special-ability-details-panel'  // may not be displayed
                         var mgit = '#full-details-placeholder-0 > div > div.magic-item-details-panel'
                         var spll = '#spell-descriptions-placeholder-0' // may not be displayed
-                        var comp = '#minions-placeholder-0 > div'
+                        var cmpn = '.minions-placeholder > div.statblock-panel'
                         var sections = [
                             char,
                             skll, abls, gear,
                             resc, bkgd, mgit,
                             attk, savt, cbmv,
                             spab, trat, spll,
-                            comp
+                            cmpn
                         ]
 
                         if ( section === 10 || section === 11 ) {
@@ -151,6 +151,28 @@
                         intersectionObserver.observe(sect);
                         sect.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
                     }
+                     function hasCompanion() {
+                        var charDiv = document.getElementById('minions-placeholder-0')
+                        return charDiv ? true : false
+                     }
+
+                     var hasUpdatedDPanelBasedOnCompanions = false
+                     function configCPanelBasedOnCompanions() {
+                        if (hasUpdatedDPanelBasedOnCompanions) { return }
+                        const hideDiv = hasCompanion()
+                                          ? document.getElementById('btn-group-div-character')
+                                          : document.getElementById('btn-group-div-character-companion')
+                        if (hideDiv) {
+                           hideDiv.classList.add('hiddenDiv')
+                           hasUpdatedDPanelBasedOnCompanions = true
+                        }
+                     }
+
+                     // cheat to delay updating the Character button div - Character or Character and Companion
+                     setTimeout(function() {
+                           configCPanelBasedOnCompanions()
+                        },
+                        1500)
                 </script>
                 <noscript>
                    <h3 class="javascript-off">You must enable JavaScript to display your character sheet...</h3>
@@ -211,6 +233,37 @@
         .btn-group-pchar button:hover {
             background-color: rgba(239,220,163,.9);
         }
+        /* single companion button split into Character and Companions */
+        .btn-group-pchar div.btn-splitgroup-div {
+          max-height: 45px;
+            width: 100%;
+            padding-left: 3px;
+
+        }
+        .btn-group-pchar div.btn-splitgroup-div button.btn-splitgroup-left {
+            padding: 10px 10px;
+            margin: 2px 0px 0px 0px;
+            max-width: 66%;
+            border-radius: 8px 0px 0px 8px;
+            border-right: 0;
+        }
+        .btn-group-pchar div.btn-splitgroup-div button.btn-splitgroup-left {outline: none;}
+        .btn-group-pchar div.btn-splitgroup-div button.btn-splitgroup-left:hover {
+            background-color: rgba(239,220,163,.9);
+        }
+
+        .btn-group-pchar div.btn-splitgroup-div button.btn-splitgroup-right {
+            padding: 10px 10px;
+            margin: 2px 0px 0px 0px;
+            max-width: 33%;
+            border-radius: 0px 8px 8px 0px;
+            border-left: 0;
+        }
+        .btn-group-pchar div.btn-splitgroup-div button.btn-splitgroup-right {outline: none;}
+        .btn-group-pchar div.btn-splitgroup-div button.btn-splitgroup-right:hover {
+            background-color: rgba(239,220,163,.9);
+        }
+        /* ---------------------- */
         .btn-group-pchar div.btn-subgroup-div {
             max-height: 29px;
             width: 100%;
@@ -252,12 +305,6 @@
         }
     </style>
 
-
-   function hasCompanion() {
-      var charDiv = document.getElementById('minions-placeholder-0')
-      return charDiv ? true : false
-   }
-
    <div id="control-panel-accordion">
        <h3><a href="#">Tillman's Bastardized Controls</a></h3>
        <div>
@@ -265,8 +312,12 @@
                 <tr><th>
                     <div>
                         <div class="btn-group-pchar">
-                            <div class='btn-group-div'>
-                                <button onclick="showSection(0)">Companion</button>
+                            <div class='btn-group-div' id="btn-group-div-character">
+                                <button onclick="showSection(0)">Character</button>
+                            </div>
+                            <div class='btn-splitgroup-div' id="btn-group-div-character-companion">
+                               <button class="btn-splitgroup-left" onclick="showSection(0)">Character</button>
+                               <button class="btn-splitgroup-right" onclick="showSection(13)">Companions</button>
                             </div>
                             <div class='btn-subgroup-div'>
                                 <button onclick="showSection(1)">Skills</button>
