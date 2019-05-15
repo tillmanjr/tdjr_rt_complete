@@ -30,7 +30,7 @@ _Typically here:_ C:\ProgramData\Hero Lab\customoutput\pathfinder
 7. Enjoy easier navigation of Ancient One's excellent Character Sheet
   
 ### Update May 13, 2019
-Revamped the highlight feature for the requested section.
+#### Revamped the highlight feature for the requested section.
 
 During a long scroll it can take a few moments for the eyes to settle and find the requested section.
 So, the requested section (the target) was enhanced by physically pulsing its size on scroll to.
@@ -42,6 +42,12 @@ The physical size pulse didn't work so well along with the effect needed to be d
 
 **Result**: The indicator is much more useful indicator and sizing side effects have been eliminated
 Note: repo sample images have not been updated to show this change
+
+#### Add support for characters with Companions (minions)
+
+If the character has a section for Companions (minions) the the Character button will be display as a seemless split button where:
+* Left 2/3rd scrolls to Character
+* Right 1/2rd scrolls to Companion
   
 ### The new control panel fits right in 
   
