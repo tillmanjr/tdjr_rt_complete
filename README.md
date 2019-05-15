@@ -10,7 +10,8 @@ To see it in action, scroll to the bottom of this readme.
 2. The related section will scroll immediately into view and be briefly hightlighted.  
 
 #### Use Notes   
-* Highlighting is a a 3s pulse animation. It could use some section specific tweaking or a better form of highlighting.
+* Highlighting is a a 3s pulse animation. It could use some section specific tweaking or a better form of highlighting.  
+  **Feature Update Completed**. See below _May 14, 2019 Update_
 * Navigating to *Spec Abilities* require the character sheet override *Show Feat/Ability Descriptions* to be enabled.  
    If the override is not enabled when *Spec Abilities* is selected the override will be automatically enabled then the section will be scrolled into view  	
  to be selected.  
@@ -27,6 +28,21 @@ _Typically here:_ C:\ProgramData\Hero Lab\customoutput\pathfinder
 5. Load your character/portfolio  
 6. File | Save Custom Output | Tillman's ...
 7. Enjoy easier navigation of Ancient One's excellent Character Sheet
+  
+### Update May 13, 2019
+Revamped the highlight feature for the requested section.
+
+During a long scroll it can take a few moments for the eyes to settle and find the requested section.
+So, the requested section (the target) was enhanced by physically pulsing its size on scroll to.
+The physical size pulse didn't work so well along with the effect needed to be delay until the target was at least on screen.
+
+1. Removed the size pulse on scroll.
+2. Now starts scrolls on click 
+3. Once the target section becomes visible on screen (detected using intersectionObserver) the target background color is set to the HeroLab yellow/khaki color with mid opacity with a 1s transition which fades it back to the original white.
+
+**Result**: The indicator is much more useful indicator and sizing side effects have been eliminated
+Note: repo sample images have not been updated to show this change
+  
   
   
 ![screenshot of new control panel](
