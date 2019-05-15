@@ -47,7 +47,14 @@ Note: repo sample images have not been updated to show this change
 
 If the character has a section for Companions (minions) the the Character button will be display as a seemless split button where:
 * Left 2/3rd scrolls to Character
+![Character button highlighting character portion](
+        https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_btn_hover_character.png
+      )  
+
 * Right 1/2rd scrolls to Companion
+ ![Character button highlighting Companion portion](
+        https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_btn_hover_companion.png
+      )
   
 ### The new control panel fits right in 
   
@@ -57,6 +64,10 @@ If the character has a section for Companions (minions) the the Character button
       
 ### New control panel in action
 ![animated gif of new control panel in action](
-        https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_see_it_in_action.gif
+        https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_see_it_in_action_2019May.gif
+        )  
+#### In action with Companions(minions)
+![animated gif of new control panel in action for character with a companion](
+        https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_see_it_in_action_w_companion_2019May.gif
         )
       
