@@ -43,7 +43,7 @@ The physical size pulse didn't work so well along with the effect needed to be d
 **Result**: The indicator is much more useful indicator and sizing side effects have been eliminated
 Note: repo sample images have not been updated to show this change
   
-  
+### The new control panel fits right in 
   
 ![screenshot of new control panel](
         https://github.com/tillmanjr/tdjr_rt_complete/raw/master/tdjr_rt_complete_screenshot.png
